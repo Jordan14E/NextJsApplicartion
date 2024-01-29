@@ -1,5 +1,6 @@
 import { postRouter } from "@models/server/api/routers/post";
 import { createTRPCRouter } from "@models/server/api/trpc";
+import { todoRouter } from "./routers/todo";
 
 /**
  * This is the primary router for your server.
@@ -8,6 +9,7 @@ import { createTRPCRouter } from "@models/server/api/trpc";
  */
 export const appRouter = createTRPCRouter({
   post: postRouter,
+  todo: todoRouter,
 });
 
 // export type definition of API
